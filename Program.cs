@@ -128,8 +128,127 @@ namespace BasicThirteen
                     count++;
                 }
             }
+            Console.WriteLine($"Greater than Y ({y}) result: {count}");
             return count;
         }
+        public static void SquareArrayValues(int[] numbers)
+        {
+            // Write a function that takes an integer array "numbers", and then multiplies each value by itself.
+            // For example, [1,5,10,-10] should become [1,25,100,100]
+            Console.Write("Result for SquareArrayValues: [");
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i]*=numbers[i];
+                if(i == numbers.Length-1)
+                {
+                    Console.Write(numbers[i]);
+                } 
+                else 
+                {
+                    Console.Write($"{numbers[i]}, ");
+                }
+            }
+            Console.Write("]");
+            Console.WriteLine("");
+        }
+        public static void EliminateNegatives(int[] numbers)
+        {
+            // Given an integer array "numbers", say [1, 5, 10, -2], create a function that replaces any negative number with the value of 0. 
+            // When the program is done, "numbers" should have no negative values, say [1, 5, 10, 0].
+            Console.Write("Result for Eliminate Negatives: [");
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i] < 0) {
+                    numbers[i] = 0;
+                }
+                if(i == numbers.Length-1)
+                {
+                    Console.Write(numbers[i]);
+                } 
+                else 
+                {
+                    Console.Write($"{numbers[i]}, ");
+                }
+            }
+            Console.Write("]");
+            Console.WriteLine("");
+        }
+        public static void MinMaxAverage(int[] numbers)
+        {
+            // Given an integer array, say [1, 5, 10, -2], create a function that prints the maximum number in the array, the minimum value in the array, and the average of the values in the array.
+            if(numbers.Length < 1)
+            {
+                return;
+            }
+
+            int[] result = new int[3];
+            int min = numbers[0];
+            int max = numbers[0];
+            int sum = 0;
+
+            for(int idx = 0; idx < numbers.Length; idx++)
+            {
+                if(numbers[idx] < min) 
+                {
+                    min = numbers[idx];
+                }
+                if(numbers[idx] > max)
+                {
+                    max = numbers[idx];
+                }
+                sum+=numbers[idx];
+            }
+            result[0] = min;
+            result[1] = max;
+            result[2] = sum/numbers.Length;
+            Console.WriteLine($"Result for MinMaxAvg: [{result[0]}, {result[1]}, {result[2]}]");
+        }
+        public static void ShiftValues(int[] numbers)
+        {
+            // Given an integer array, say [1, 5, 10, 7, -2], 
+            // Write a function that shifts each number by one to the front and adds '0' to the end. 
+            // For example, when the program is done, if the array [1, 5, 10, 7, -2] is passed to the function, 
+            // it should become [5, 10, 7, -2, 0].
+            if(numbers.Length < 1){
+                return;
+            }
+            if(numbers.Length == 1){
+                numbers[0] = 0;
+                Console.WriteLine($"[{numbers[0]}]");
+                return;
+            }
+            Console.Write("Result for ShiftValues [");
+            for(int idx = 0; idx < numbers.Length-1; idx++)
+            {
+                numbers[idx] = numbers[idx+1];
+                Console.Write($"{numbers[idx]}, ");
+            }
+            numbers[numbers.Length-1] = 0;
+            Console.Write($"{numbers[numbers.Length-1]}]");
+            Console.WriteLine("");
+        }
+        public static object[] NumToString(int[] numbers)
+        {
+            object[] result = new object[numbers.Length];
+            // Write a function that takes an integer array and returns an object array 
+            // that replaces any negative number with the string 'Dojo'.
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i] < 0) {
+                    
+                }
+                if(i == numbers.Length-1)
+                {
+                    Console.Write(numbers[i]);
+                } 
+                else 
+                {
+                    Console.Write($"{numbers[i]}, ");
+                }
+            }
+        }
+
+        
         // // // //
         // MAIN //
         static void Main(string[] args)
@@ -141,6 +260,11 @@ namespace BasicThirteen
             FindMax(new int[]{1, -3, 4, 2});
             GetAverage(new int[]{5,6,7,8,9,10});
             OddArray();
+            GreaterThanY(new int[]{1,2,3,4,5}, 2);
+            SquareArrayValues(new int[]{1,2,3,4,5});
+            EliminateNegatives(new int[]{1, -3, 4, 2});
+            MinMaxAverage(new int[]{9,5,6,7,10,8});
+            ShiftValues(new int[]{9,5,6,7,10,8});
         }
     }
 }
