@@ -1,0 +1,11 @@
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/bin/Debug/netcoreapp2.2/BasicThirteen.deps.json
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/bin/Debug/netcoreapp2.2/BasicThirteen.runtimeconfig.json
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/bin/Debug/netcoreapp2.2/BasicThirteen.runtimeconfig.dev.json
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/bin/Debug/netcoreapp2.2/BasicThirteen.dll
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/bin/Debug/netcoreapp2.2/BasicThirteen.pdb
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/obj/Debug/netcoreapp2.2/BasicThirteen.csprojAssemblyReference.cache
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/obj/Debug/netcoreapp2.2/BasicThirteen.csproj.CoreCompileInputs.cache
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/obj/Debug/netcoreapp2.2/BasicThirteen.AssemblyInfoInputs.cache
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/obj/Debug/netcoreapp2.2/BasicThirteen.AssemblyInfo.cs
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/obj/Debug/netcoreapp2.2/BasicThirteen.dll
+/Users/rtongson/Documents/csharp/fundamentals/BasicThirteen/obj/Debug/netcoreapp2.2/BasicThirteen.pdb
