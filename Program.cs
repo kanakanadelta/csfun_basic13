@@ -234,18 +234,22 @@ namespace BasicThirteen
             // that replaces any negative number with the string 'Dojo'.
             for(int i = 0; i < numbers.Length; i++)
             {
-                if(numbers[i] < 0) {
-                    
+                if(numbers[i] < 0) 
+                {
+                    result[i] = "Dojo";
                 }
-                if(i == numbers.Length-1)
+                else
                 {
-                    Console.Write(numbers[i]);
-                } 
-                else 
-                {
-                    Console.Write($"{numbers[i]}, ");
+                    result[i] = numbers[i];
                 }
             }
+            Console.Write("[");
+            foreach(var elem in result)
+            {
+                Console.Write($"{elem}, ");
+            }
+            Console.WriteLine("]");
+            return result;
         }
 
         
@@ -265,6 +269,7 @@ namespace BasicThirteen
             EliminateNegatives(new int[]{1, -3, 4, 2});
             MinMaxAverage(new int[]{9,5,6,7,10,8});
             ShiftValues(new int[]{9,5,6,7,10,8});
+            NumToString(new int[]{1, -3, 4, 2});
         }
     }
 }
